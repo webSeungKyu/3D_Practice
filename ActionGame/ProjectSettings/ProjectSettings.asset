@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 38b6e89d9cea6d8439f45dec809ef8c0
+  productGUID: bf25212a3af96534cb371c4aae67dcc2
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -752,10 +752,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 199dcf20-e197-4ff6-ad51-ad34f23ae62e
+  cloudProjectId: 048138cb-145b-4273-8585-9b51dc105721
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: ActionGame 2024-03-13_09-16-56
+  projectName: ActionGame 2024-03-13_09-37-00
   organizationId: abcsksk1
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
