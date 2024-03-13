@@ -356,6 +356,7 @@
 "Assets/Scripts/Controller/TouchPad.cs"
 "Assets/Scripts/Player/Effect.cs"
 "Assets/Scripts/Player/Effect_Destroy.cs"
+"Assets/Scripts/Player/PlayerHealth.cs"
 "Assets/Scripts/Player/PlayerMovement.cs"
 -langversion:9.0
 
