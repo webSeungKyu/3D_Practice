@@ -2288,7 +2288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ece615a4b2d312e429c1864dc1c15aa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 1310545367}
   enemy: {fileID: 138360008}
   spawnTime: 3
   spawnPoints:
