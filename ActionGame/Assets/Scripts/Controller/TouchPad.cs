@@ -32,7 +32,7 @@ public class TouchPad : MonoBehaviour
     public void ButtonUp()
     {
         Debug.Log("ButtonUp");
-        _buttonPressed = true;
+        _buttonPressed = false;
         HandleInput(_startPos);
     }
 
@@ -93,6 +93,7 @@ public class TouchPad : MonoBehaviour
                 //터치 입력이 끝난 경우
                 if(touch.phase == TouchPhase.Ended)
                 {
+                    Debug.Log("터치 입력 끝남");
                     if(_touchId == i)
                     {
                         _touchId = -1;

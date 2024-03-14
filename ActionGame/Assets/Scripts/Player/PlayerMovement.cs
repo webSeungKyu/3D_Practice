@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 {
     //게임 오브젝트 내에 연결되어있는 Animator 컴포넌트를 가져와서 사용합니다.
     protected Animator avatar;
+    protected PlayerAttack PlayerAttack;
 
     float h;
     float v;
@@ -26,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         avatar = GetComponent<Animator>();
+        PlayerAttack = GetComponent<PlayerAttack>();
     }
 
     /// <summary>
@@ -96,6 +98,7 @@ public class PlayerMovement : MonoBehaviour
             while (attacking)
             {
                 avatar.SetTrigger("AttackStart");
+                PlayerAttack.NomalAttack();
                 yield return new WaitForSeconds(1.0f);
             }
         }
@@ -119,7 +122,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if(Time.time - lastSkillTime > 1.0f)
         {
-            avatar.SetBool("Skill", false);
+            avatar.SetBool("Skill", true);
+            lastSkillTime = Time.time;
+            PlayerAttack.SkillAttack();
         }
     }
 
@@ -133,6 +138,7 @@ public class PlayerMovement : MonoBehaviour
             lastDashTime = Time.time;
             dashing = true;
             avatar.SetTrigger("Dash");
+            PlayerAttack.DashAttack();
         }
     }
     #endregion
