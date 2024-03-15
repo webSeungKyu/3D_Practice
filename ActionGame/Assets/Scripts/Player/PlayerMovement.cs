@@ -67,6 +67,8 @@ public class PlayerMovement : MonoBehaviour
     #region EventTrigger
     public void OnAttackDown()
     {
+        Debug.Log("공격 시도 시 포인트 +100");
+        StageController.instance.AddPoint(100);
         attacking = true;
         avatar.SetBool("Combo", true);
         StartCoroutine("StartAttack"); // 코루틴을 작동시키는 코드

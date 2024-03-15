@@ -103,7 +103,7 @@ public class EnemyHealth : MonoBehaviour
     void Death()
     {
         isDead = true;
-
+        StageController.instance.AddPoint(100);
         transform.GetChild(0).GetComponent<BoxCollider>().isTrigger = true;
 
         //애니메이션 트리거 작동
@@ -125,6 +125,9 @@ public class EnemyHealth : MonoBehaviour
         GetComponent<Rigidbody>().isKinematic = true;
 
         isSinking = true;
+
+
+        
 
         Destroy(gameObject, 2.0f);
 
