@@ -67,11 +67,13 @@ O(1)은 O(log n)과 비교했을 때 비등하다 데이터의 개수가 약 100개 이상을 넘을 경우
 [명칭]          [추가]        [검색]        [삭제]        [인덱스로 인한 접근]
 LinkedList<T>    O(1)           O(n)        O(n)           O(n)
 List<T>          O(1)           O(n)        O(n)           O(1)
-Stack<T> 
-Queue<T>
-HashSet<T>   
-Dictionary<K,V>
-T[]  
+Stack<T>         O(1)            -          O(1)            -  
+Queue<T>         O(1)            -          O(1)            -  
+HashSet<T>       O(1)           O(1)        O(1)            -  (인덱스 대신에 키를 인덱스처럼 사용합니다)
+Dictionary<K,V>  O(1)           O(1)        O(1)            -  
+T[]              O(n)           O(n)        O(n)           O(1)
+ - 배열의 경우 추가, 검색, 삭제 기능이 없기 때문에 따로 로직을 짜서 실행을 해야합니다
+ - 배열은 다 만들어진 고정형 데이터에 대한 불필요한 메모리 낭비를 막기 위해 사용하는 경우가 가장 좋다
  */
 #endregion
 public class OOPExample : MonoBehaviour

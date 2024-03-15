@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/GetComponentAndEnabledExample.unity
+- path: Assets/Scenes/OOPExample.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
