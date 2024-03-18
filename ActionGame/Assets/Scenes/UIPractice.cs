@@ -31,7 +31,7 @@ public class UIPractice : MonoBehaviour
 
     public void whatYourItem()
     {
-        
+        nameDropdown = GetComponent<Dropdown>();
     }
 
 }
