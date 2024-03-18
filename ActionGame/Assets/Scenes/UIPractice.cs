@@ -9,7 +9,8 @@ public class UIPractice : MonoBehaviour
     public Text nameText;
     public InputField nameInputField;
     public Button nameButton;
-    
+    public Dropdown nameDropdown;
+    public Image nameImage;
 
     public void whatYourName()
     {
