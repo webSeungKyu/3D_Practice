@@ -12,6 +12,7 @@ public class InfoManager : MonoBehaviour
     public Text id;
     public Text point;
     public Text gold;
+    public InputField InputField;
 
 
     private void Awake()
@@ -65,6 +66,15 @@ public class InfoManager : MonoBehaviour
 
     }
 
+    public void ReName()
+    {
+        
+        playerInfo.name = InputField.text.ToString();
+        SaveData(playerInfo);
+        id.text = playerInfo.name;
+
+    }
+
 
 
     private string ResourcePath = Application.dataPath + "/Resources/";
@@ -85,10 +95,30 @@ public class InfoManager : MonoBehaviour
         //폴더가 없을 경우에는 폴더를 생성합니다.
         if (!Directory.Exists(ResourcePath)) Directory.CreateDirectory(ResourcePath);
 
-        var sJson = JsonUtility.ToJson(info);
+        var sJson = JsonUtility.ToJson(info); // 1. json 파일의 정보를 string 형태로 저장합니다
 
-        var FilePath = ResourcePath + "Info.json";
-
+        var FilePath = ResourcePath + "Info.json"; 
+        //DataPath/info.json
+        //여러 문자열을 한 경로로 결합하는 기능 (System.IO)
         File.WriteAllText(FilePath, sJson);
+    }
+
+    public Info LoadData(string path)
+    {
+        playerInfo = null; //클래스 객체 비우기 ( 안 해도 상관 없음 )
+        if(File.Exists(path)) // 파일이 전달한 경로에 존재할 경우
+        {
+            string json = File.ReadAllText(path); // 해당 경로로부터 파일을 읽어옵니다
+            playerInfo = JsonUtility.FromJson<Info>(json); // 읽은 내용을 통해 Info에 값을 전달합니다
+        }
+
+        return playerInfo; // 완성된 객체를 return 합니다
+    }
+
+    public void LoadData2()
+    {
+        string data = File.ReadAllText(ResourcePath + "Info.json");
+        playerInfo = JsonUtility.FromJson<Info>(data);
+        Debug.Log($"Load... : {playerInfo.name} | {playerInfo.point} | {playerInfo.gold}" );
     }
 }
