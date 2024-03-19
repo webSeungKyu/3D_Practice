@@ -56,6 +56,17 @@ public class InfoManager : MonoBehaviour
         }
     }
 
+    public void PointPlus()
+    {
+        playerInfo.point += 100;
+        SaveData(playerInfo);
+        point.text = playerInfo.point.ToString();
+        gold.text = playerInfo.gold.ToString();
+
+    }
+
+
+
     private string ResourcePath = Application.dataPath + "/Resources/";
 
     //[ 유니티 데이터 경로]
