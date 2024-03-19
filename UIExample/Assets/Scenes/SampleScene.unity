@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 178611880}
   - component: {fileID: 178611879}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: GamePanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -598,6 +598,7 @@ GameObject:
   - component: {fileID: 289418384}
   - component: {fileID: 289418383}
   - component: {fileID: 289418382}
+  - component: {fileID: 289418385}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -707,6 +708,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289418380}
   m_CullTransparentMesh: 1
+--- !u!114 &289418385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 289418380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 914369841}
+          m_TargetAssemblyTypeName: GameStart, Assembly-CSharp
+          m_MethodName: WhatYourNum
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &348550997
 GameObject:
   m_ObjectHideFlags: 0
@@ -720,7 +750,7 @@ GameObject:
   - component: {fileID: 348550999}
   - component: {fileID: 348551001}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: GameText (Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -742,7 +772,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -180.65, y: 145.75}
+  m_AnchoredPosition: {x: 0, y: 82}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &348550999
@@ -778,7 +808,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &348551000
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1836,6 +1866,7 @@ GameObject:
   - component: {fileID: 914369837}
   - component: {fileID: 914369836}
   - component: {fileID: 914369840}
+  - component: {fileID: 914369841}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1950,6 +1981,22 @@ MonoBehaviour:
   point: {fileID: 553204441}
   gold: {fileID: 1683025783}
   InputField: {fileID: 1084209555}
+--- !u!114 &914369841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914369835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43bb4a86fa65d7e4097de6a6d691983b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 348550999}
+  oneInputField: {fileID: 719101542}
+  twoInputField: {fileID: 543820217}
+  threeInputField: {fileID: 2142114058}
 --- !u!1 &958344587
 GameObject:
   m_ObjectHideFlags: 0
@@ -2367,6 +2414,7 @@ GameObject:
   - component: {fileID: 1069344135}
   - component: {fileID: 1069344134}
   - component: {fileID: 1069344133}
+  - component: {fileID: 1069344136}
   m_Layer: 5
   m_Name: GameStartButton
   m_TagString: Untagged
@@ -2476,6 +2524,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1069344131}
   m_CullTransparentMesh: 1
+--- !u!114 &1069344136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069344131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 914369841}
+          m_TargetAssemblyTypeName: GameStart, Assembly-CSharp
+          m_MethodName: StartGame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1084209554
 GameObject:
   m_ObjectHideFlags: 0
@@ -4074,6 +4151,7 @@ GameObject:
   - component: {fileID: 1941785213}
   - component: {fileID: 1941785212}
   - component: {fileID: 1941785211}
+  - component: {fileID: 1941785214}
   m_Layer: 5
   m_Name: GameResetButton (1)
   m_TagString: Untagged
@@ -4183,6 +4261,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1941785209}
   m_CullTransparentMesh: 1
+--- !u!114 &1941785214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941785209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 914369841}
+          m_TargetAssemblyTypeName: GameStart, Assembly-CSharp
+          m_MethodName: ReStartGame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2051790487
 GameObject:
   m_ObjectHideFlags: 0
@@ -4264,7 +4371,7 @@ GameObject:
   - component: {fileID: 2142114059}
   - component: {fileID: 2142114058}
   m_Layer: 5
-  m_Name: LastInputField
+  m_Name: ThreeInputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
